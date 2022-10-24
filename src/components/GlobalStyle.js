@@ -10,9 +10,12 @@ html{
     box-sizing: inherit;
     font-size: 62.5%;
     font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Lobster', cursive; */
 }
 body{
     background-color:#1b1b1b;
+    font-family: 'Inter', sans-serif;
 
 }
 button{
@@ -23,6 +26,7 @@ button{
     cursor: pointer;
     border:3px solid #23d997;
     background: transparent;
+    font-family: 'Inter', sans-serif;
     transition: all .1s ease-in-out;
     &:hover{
         transform: translateY(-2px);
@@ -40,6 +44,9 @@ button{
     }
     h3{
         color:#fff;
+    }
+    h4{
+        font-size: 3.2rem;
     }
     p{
         padding: 3rem 0rem;
