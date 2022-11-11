@@ -42,7 +42,7 @@ const StyleNav = styled.div`
     list-style: none;
   }
   li {
-    padding: 10rem;
+    padding: 5rem;
 
     position: relative;
 

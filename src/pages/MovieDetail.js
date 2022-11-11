@@ -4,6 +4,10 @@ import styled from "styled-components";
 import { MovieState } from "../movieState";
 import { useLocation } from "react-router-dom";
 
+//animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animations";
+
 const MovieDetail = () => {
   const location = useLocation();
   const url = location.pathname;
@@ -17,7 +21,12 @@ const MovieDetail = () => {
   return (
     <>
       {movie && (
-        <Details>
+        <Details
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <HeadLine>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="Movie piture" />
@@ -40,7 +49,7 @@ const MovieDetail = () => {
   );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   width: 100%;
   padding: 5rem 10rem;
 `;
